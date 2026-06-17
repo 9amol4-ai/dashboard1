@@ -1,6 +1,6 @@
 const API = {
     config: {
-        coldCallStageName: 'Холодный обзвон',
+        coldCallStageName: 'Новый лид (первичный контакт)',
         coldCallStageId: null,
     },
 
@@ -43,9 +43,7 @@ const API = {
             });
 
             const stage = stages.find(s => 
-                s.NAME.toLowerCase().includes('холодн') ||
-                s.NAME.toLowerCase().includes('cold') ||
-                s.NAME.toLowerCase().includes('обзвон')
+                s.NAME === this.config.coldCallStageName
             );
 
             if (stage) {
