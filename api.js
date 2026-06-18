@@ -1,4 +1,4 @@
-const API = {
+window.API = {
     config: {
         coldCallStageName: 'Новый лид (первичный контакт)',
         coldCallStageId: null,
